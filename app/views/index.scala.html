@@ -1,7 +1,35 @@
-@(message: String)
+@()
 
-@main("Welcome to Play") {
+@main("QR Code App") {
 
-    @play20.welcome(message)
+<!-- Main -->
+<div class="container">
+  <!-- Panel -->
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            QR Code App
+          </div>
+        </div>
+        <div class="panel-body" ng-controller="WeatherCtrl">
+          <form class="form form-vertical" role="form">
+            <textarea id="text"
+                      class="form-control"
+                      rows="5">Enter text here</textarea>
+
+            <img id="qr"
+                 class="img-responsive"
+                 src="">
+          </form>
+        </div> <!-- Panel Body -->
+      </div> <!-- Panel -->
+    </div><!--/col-span-6-->
+  </div>  <!-- Row -->
+</div>
+<!-- /Main -->
+
+<footer></footer>
 
 }
