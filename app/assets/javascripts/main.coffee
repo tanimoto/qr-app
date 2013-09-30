@@ -10,10 +10,11 @@ $ ->
   $text.change ->
     text = $text.val()
     $.ajax "/api/qr",
+      type: "GET"
       data:
         text: text
-      success: (enc) ->
-        updateImg(enc)
+      success: (res) ->
+        updateImg(res)
 
   # Trigger a change
   $text.change()
